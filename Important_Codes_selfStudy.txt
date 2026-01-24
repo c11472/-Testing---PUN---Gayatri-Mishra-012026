@@ -1,0 +1,20 @@
+
+
+tags = "@smoke"
+
+tags = "@smoke or @regression"
+
+tags = "(@smoke or @regression) and @ui and not @wip"
+
+
+Please go through the below sample codes and understand the syntax:
+    
+      1.  Reporter.log(String message); --- emailablereports.html
+      2.  JavaScriptExcecutor script for scroll down 
+      3.  JavaScriptExceutor script to perform login in any form
+      4.  Automate taking screenshots using TakeScreenShot interface
+    
+
+
+
+
