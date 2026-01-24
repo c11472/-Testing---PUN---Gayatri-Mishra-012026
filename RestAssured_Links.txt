@@ -1,0 +1,10 @@
+Official Links :
+
+RestAssured Assertions:
+https://github.com/rest-assured/rest-assured/wiki/Usage#content-type
+
+Specifying Request Data :
+https://github.com/rest-assured/rest-assured/wiki/Usage#content-type
+
+Parameters:
+https://github.com/rest-assured/rest-assured/wiki/Usage#content-type
