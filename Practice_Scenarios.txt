@@ -1,0 +1,23 @@
+Scenario-2
+https://the-internet.herokuapp.com/javascript_alerts
+
+Scenario-1
+https://the-internet.herokuapp.com/tables
+
+Scenario-3
+https://the-internet.herokuapp.com/notification_message_rendered
+
+Scenario-4
+https://the-internet.herokuapp.com/redirector
+
+Scenario-5
+https://the-internet.herokuapp.com/hovers
+
+Scenario-6
+https://the-internet.herokuapp.com/download_secure
+
+
+Backup Codes-G4G
+
+https://github.com/c11472/G4GTraingDemo_Selenium_June2024.git
+
