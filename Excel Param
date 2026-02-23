@@ -1,0 +1,34 @@
+// Excel Parameterization
+
+        int rowCount = sheet.getPhysicalNumberOfRows();
+
+        // Loop through 3 sets of credentials
+        for (int i = 1; i < rowCount; i++) {
+
+            Row row = sheet.getRow(i);
+
+            String username = row.getCell(0).getStringCellValue();
+            String password = row.getCell(1).getStringCellValue();
+
+            // Open login page
+            driver.get("https://example.com/login");
+
+            // Locate elements (Update locators as per your application)
+            WebElement userField = driver.findElement(By.id("username"));
+            WebElement passField = driver.findElement(By.id("password"));
+            WebElement loginBtn = driver.findElement(By.id("loginBtn"));
+
+            // Enter credentials
+            userField.clear();
+            userField.sendKeys(username);
+
+            passField.clear();
+            passField.sendKeys(password);
+
+            loginBtn.click();
+
+            System.out.println("Login attempted with: " + username);
+
+            // Optional: Add validation or logout step here
+
+        }
