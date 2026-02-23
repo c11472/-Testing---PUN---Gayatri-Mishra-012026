@@ -1,0 +1,61 @@
+package ExcelRead_POI.ExcelRead_POI;
+
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
+import java.io.IOException;
+
+import org.apache.poi.ss.usermodel.Row;
+import org.apache.poi.ss.usermodel.Sheet;
+import org.apache.poi.ss.usermodel.Workbook;
+import org.apache.poi.xssf.usermodel.XSSFWorkbook;
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.chrome.ChromeDriver;
+
+public class ExcelRead2 {
+	public static void main(String[] args) throws IOException {
+		
+		String value=null;          //variable for storing the cell value  
+		Workbook wb=null;           //initialize Workbook null  
+	 
+		//reading data from a file in the form of bytes  
+		FileInputStream fis=new FileInputStream("./TestData/Login_Data.xlsx");  
+		//constructs an XSSFWorkbook object, by buffering the whole stream into the memory  
+		wb=new XSSFWorkbook(fis);
+		Sheet sheet=wb.getSheetAt(0); 
+		
+		WebDriver driver = new ChromeDriver();
+		
+		 int rowCount = sheet.getPhysicalNumberOfRows();
+
+	        // Loop through 3 sets of credentials
+	        for (int i = 1; i < rowCount; i++) {
+
+	            Row row = sheet.getRow(i);
+
+	            String username = row.getCell(0).getStringCellValue();
+	           // String password = row.getCell(1).getStringCellValue();
+
+	            // Open login page
+	            driver.get("https://www.google.com");
+
+	            // Locate elements (Update locators as per your application)
+	            WebElement inp = driver.findElement(By.name("q"));
+	            	            // Enter credentials
+	            inp.sendKeys(username);
+
+	           
+	            // Optional: Add validation or logout step here
+
+	        }
+		
+		
+		
+		
+		
+
+		  	
+
+}
+}
