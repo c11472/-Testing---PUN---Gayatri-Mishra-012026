@@ -1,0 +1,5 @@
+org.apache.log4j.Logger logtest=LogManager.getLogger(TC_001.class);
+System.out.println("Hello Logs");
+String s = "Your Sytore";
+logtest.info("Hello this is my test log val" + " "+s);
+		
