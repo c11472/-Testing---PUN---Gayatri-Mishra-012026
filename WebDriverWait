@@ -1,0 +1,8 @@
+public void Wait_Dynamic(int timmer1) {
+		
+		WebDriver wait = (WebDriver) new WebDriverWait(driver,Duration.ofSeconds(60));
+		WebElement element = driver.findElement(By.xpath(""));
+		//((FluentWait<WebDriver>) wait).until(ExpectedConditions.visibilityOf(element))
+		wait.until(ExpectedConditions.visibilityOf(element))
+		
+	}
